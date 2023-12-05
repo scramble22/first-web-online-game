@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая онлайн игра</title>
+</head>
+<body>
+    <h1>Простая онлайн игра</h1>
+    <div>
+        <label for="username">Введите ваш никнейм: </label>
+        <input type="text" id="username">
+        <button onclick="startGame()">Начать игру</button>
+    </div>
+    <div id="game" style="display:none;">
+        <p id="status"></p>
+        <button onclick="makeMove('rock')">Камень</button>
+        <button onclick="makeMove('paper')">Бумага</button>
+        <button onclick="makeMove('scissors')">Ножницы</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
